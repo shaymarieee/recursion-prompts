@@ -54,10 +54,8 @@ var isEven = function(n) {
   var result = true;
   var x = Math.abs(n);
   x = x / 2;
-  if (x === 0) {result = true};
-  if (x === 1) {result = false};
-  if (result > 1) {isEven(x)};
-
+  if(!Number.isInteger(x)) {result = false};
+  if (x > 1) {isEven(x)};
   return result;
 };
 
